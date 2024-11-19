@@ -29,7 +29,7 @@
 
         */
 
-        // type STRING
+        // type ----------------- STRING-------------------
         // Nous pouvons initialiser une chaîne de caractères de plusieurs façons :
         // Avec les guillemets doubles (double quotes) : 
         let chaine1 = "test";
@@ -50,7 +50,64 @@
         
         //L'antislash permet d'échapper un caractère dans le string
 
-        console.log(monTexte3);
+        // console.log(monTexte3);
+
+        // Avec backquotes `` (Alt Gr + 7)
+        let bienvenue = `Aujourd'hui c'est l'arrivée de Kader`;
+        // console.log(bienvenue);
+
+        const PRENOM = "Kader";
+        bienvenue = `Aujourd'hui c'est l'arrivée de ${PRENOM}`;
+        // console.log(bienvenue);
+        const PRENOM2 = "Hawa";
+        // let monTexte4 = 'Je sors avec ' + PRENOM2 + ' lorsqu\'il fait beau';
+        // let monTexte4 = "Je sors avec " + PRENOM2 + " lorsqu'il fait beau";
+        let monTexte4 = `Je sors avec ${PRENOM2} lorsqu'il fait beau`;
+        // console.log(monTexte4);
+
+    // type ----------------- NUMBER -------------------
+
+        let chiffre = 55;        
+        let negatif = -55;
+        let decimal = 5.5;
+
+    // type ----------------- BOOLEEN -------------------
+    // Il ne prend que 2 valeurs : soit TRUE, soit FALSE
+
+        let choix = true;
+        // console.log(choix);
+        
+    // type ---------------------------------------------
+
+    // Afin de vérifier le type d'une variable, on utilise la fonction TYPEOF()
+    // console.log(typeof(choix));
+    // console.log(typeof(decimal), decimal);
+    // console.log(typeof(negatif), negatif);
+    // console.log(typeof(monTexte4), monTexte4);
+
+    // type ------------------ AFFICHAGE ---------------------------
+
+    // Pour afficher le contenu de ma varible sur ma page
+    const ESAPCE = "\n";
+    // document.write(monTexte4, ESPACE, bienvenue);
+    // document.write(bienvenue);
+
+    const SAUTLIGNE = "<br>";
+    document.write(monTexte4, SAUTLIGNE, bienvenue);
+    
+    // type ------------------ Boîte de dialogue ---------------------------
+
+    // alert("Ceci est un message d'alerte"); // Le résultat affiche une alerte
+
+    // confirm("Vous confirmez ?"); // Le résultat affiche un message de confirmation
+
+    // prompt("Voici un prompt"); // C'est comme un input pour l'utilisateur. Sert à récupérer une donnée de l'utilisateur.
+
+    let monAge = prompt("Quel est votre âge ?");
+    // console.log(monAge);
+    
+
+
 
 
 
