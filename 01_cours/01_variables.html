@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables en Javascript</title>
+    <!-- Si on veut utiliser script.js dans le head, il faut mettre l'attribut "defer" -->
+    <!-- <script src="script.js" defer></script>  -->
+    <!--  -->
+</head>
+<body>
+    
+
+    <h1>Les variables en Javascript</h1>
+
+
+    <!-- La balise "<script> </script>" direct dans le document HTML //  -->
+
+    <script>
+
+        // commentaires en javascript sur une ligne (//)
+
+        /*
+
+            Commentaire pour un bloc de texte, sur plusieurs lignes
+
+        */
+
+
+        
+        // *********** LES VARIABLES ************
+
+        /*
+            - Les variables sont comme des boîtes.
+            - Vous pouvez y stocker ce que vous souhaitez.
+            - On initialise une varibale avec son nom (de votre choix)
+            - Puis on lui attribue une valeur.
+            - Pour déclarer une variable, on utilise un préfixe : const, let ou var
+
+            ATTENTION : on utilise les préfixes seulement lors de l'inititalisation
+            Var : façon obsolète
+
+        */
+       
+            // La déclaration "const" permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
+            // Dans la convention, on écrit les constantes en majuscules pour les reconnaître.
+            const TEST = "Hello World";
+            // console.log(TEST);
+            // TEST = "Bonjour";
+            // console.log(TEST);
+
+            /* test = "Bonjour"; */ /* ici, test sans let juste avant, ça fonctionne... mais normalement il faut conventionnellement toujours déclarer ses variables avant de les utiliser :
+            << let test = "Bonjour"; >> */
+
+            // console.log(test);
+
+            let test2 = "Colombbus";
+            // console.log(test2);
+
+            test2 = "10mentionweb";
+            // console.log(test2);
+
+            let test3;
+            test3 = "Bientôt on mange";
+            // console.log(test3);
+            
+            // Avec le préfixe ou le mot-clé "let", je peux changer ou modifier la valeur de ma variable
+
+    </script>
+
+    <!-- Utilisation d'un document externe avec une extension ".js" -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
