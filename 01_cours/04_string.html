@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les strings</title>
+</head>
+<body>
+
+    <script>
+        const PRENOM = "Alexandre";
+        const NOM = "Cavet";
+        // document.write(PRENOM + ' ' + NOM + '<br>');
+        document.write(`${PRENOM} ${NOM} <br>`);
+        const PRENOM2 = "Ouarda";
+        const NOM2 = "Chied";
+        document.write(`${PRENOM2} ${NOM2} <br>`);
+
+        document.write("<hr>");
+
+        let a = 10;
+        let b = 5;
+        let c = "5";
+        // document.write((a + b) + '<br>');
+        document.write(`${a + b} <br>`);
+
+        // document.write(a + c);
+        document.write(`${a + c} <br>`);
+
+        document.write("<hr>");
+
+        // Exercice
+        // Réalisez un prompt demandant son âge à l'utilisateur, puis récupérer cette donnée puis l'afficher de cette façon : "Vous avez xx ans"
+
+        // let age = prompt("Quel est votre âge ?");
+        // document.write(`Vous avez ${age} ans`);
+        // document.write(`Vous avez ${age} ans`);
+
+        document.write("<hr>");
+
+        let fruits = 'Pommes';
+        console.log(fruits);
+        fruits += 'fraise';
+        // pareil que : fruits = fruits + 'fraise';
+        console.log(fruits);
+        fruits += 'mangue';
+        console.log(fruits);
+        
+        document.write("<hr>");
+
+        let quelqueChose;
+        console.log(quelqueChose); 
+        // Affiche "undefined" (variable existe (= déclarée), mais sans valeur (donc elle n'est pas définie)) (on peut la garder sans contenu mais elle restera indéfinie)
+        // console.log(autreChose); 
+        // Affiche "is not defined ERROR" (variable n'est pas définie non plus, mais cette fois-ci car elle n'existe même pas (= non déclarée) !)
+        
+        document.write("<hr>");
+        
+        // string => vers number
+        let unNombre = '24';
+        console.log(unNombre); // Affiche 24
+        console.log(typeof unNombre, unNombre); // Retourne dans la console : string (chaîne de caractères)
+
+        // Pour convertir le string '24' en number 24, on fait : 
+
+        unNombre = parseFloat(unNombre); // on peut utiliser aussi << parseInt(unNombre); >>
+        console.log(unNombre);
+        console.log(typeof unNombre, unNombre);
+        
+        // Number vers String : 
+
+        unNombre = unNombre.toString();
+        console.log(typeof unNombre, unNombre);
+
+
+        let age = prompt("Quel est votre âge ?");
+        age = parseInt(age);
+        console.log(typeof age, age);
+        
+        
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
