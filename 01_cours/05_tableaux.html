@@ -28,8 +28,47 @@
         let myArray = new Array;
         console.log(myArray);
         
-        
+        // Classe en js : c'est comme un "moule" => exemple : classe : Voiture (avec une majuscule au début !). Cette Voiture a différentes propriétés : nbDePortes, couleur, puissance, etc.
 
+        // myArray et monTableau sont des tableaux qui peuvent contenir plusieurs informations.
+        // Affecter des valeurs au tableau, plusieurs méthodes existent : 
+        // a) Déclarer le tableau avec let
+        let nosPrenoms = ["Andrei", "Roger", "Hawa", "Islem"];
+        // Affiche toutes les données de mon tableau
+        console.log(nosPrenoms);
+
+        // b) Réutiliser un tableau déjà existant : 
+        monTableau[0] = "Yacine";
+        monTableau[1] = "Fayçal";
+        monTableau[2] = "Ouarda";
+        monTableau[3] = "Alpha";
+        monTableau[4] = "Delma";
+        monTableau[10] = "Andrea"; // Ici, cela force le tableau a afficher 11 cases du tableau (length = 11) avec les cases 0,1,2,3,4,10 remplies ET avec les cases 5,6,7,8,9 vides
+
+        // Affiche le tableau
+        console.log(monTableau);
+
+        // Affiche "Ouarda"
+        console.log(monTableau[2]);
+
+        // On va créer 2 tableaux indexés : 
+        let listeDePrenom = ["Kader", "Alexandre", "Bashir"];
+        let listeDeNom = ["Ounadjela", "Graziani", "Youcif"];
+        let annuaire = [listeDePrenom, listeDeNom];
+
+        // annuaire est un tableau INDEXé MULTIDIMENTIONNEL
+        // on affiche le tableau annuaire
+        console.log(annuaire);
+
+        // on affiche le tableau annuaire sous forme de tableau DE tableau, grâce à ".table"
+        console.table(annuaire);
+
+        document.write(annuaire + '<br>');
+        document.write(annuaire[0][0] + ' ' + annuaire[1][0] + '<br>');
+        document.write(annuaire[0][1] + ' ' + annuaire[1][1] + '<br>');
+        document.write(annuaire[0][2] + ' ' + annuaire[1][2] + '<br>');
+        
+        
 
 
     </script>
