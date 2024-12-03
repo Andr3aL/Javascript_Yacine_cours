@@ -261,8 +261,59 @@
         droitBoire = (monAge < 13) ? "<p>Rentre chez toi petit</p>" : (monAge < 18 ) ? "<p>Tu n'as pas le droit de boire</p>" : "<p>Tu as le droit de boire</p>";
 
         document.write(droitBoire);
+        document.write("<hr>");
 
-        
+
+        // ------------------------ IF / ELSE ------------------------ SWITCH / CASE -----------------------------
+
+        let age;
+        age = parseInt(prompt("Veuillez entrer votre âge : "));
+
+        // ------------------------ IF / ELSE -------------------------
+
+        if (isNaN(age) || age <= 0) {
+            alert("Veuillez entrer un âge valide");
+        } else if (age < 13) {
+            alert("Tu es encore trop jeune pour participer.");
+        } else if (age >= 13 && age < 18) {
+            alert("Il est encore temps pour pouvoir participer !");
+        } else if (age >= 18 && age <= 30) {
+            alert("Bienvenue dans la catégorie jeune adulte !");
+        } else {
+            alert("Merci pour votre intérêt, mais cette activité est réservée aux jeunes !");
+        }
+
+        // --------------------------------- SWITCH / CASE -------------------------------------------
+
+        /*
+            La condition SWITCH répond à des cas bien spécifiques.
+            Vous pouvez écrire chaque condition à l'intérieur d'un CASE
+            et sortir de ce CASE par un BREAK (stoppe la condition)
+        */
+
+        if (isNaN(age) || age <= 0) {
+            alert("Veuillez entrer un âge valide");
+        } else {
+            switch (true) {
+                case (age < 13) : 
+                    alert("Tu es encore trop jeune pour participer.");
+                    break;
+                case (age >= 13 && age < 18) : 
+                    alert("Il est encore temps pour pouvoir participer !");
+                    break;
+                case (age >= 18 && age <= 30) : 
+                    alert("Bienvenue dans la catégorie jeune adulte !");
+                    break;
+                default : 
+                    alert("Merci pour votre intérêt, mais cette activité est réservée aux jeunes !");
+                    break;
+            }
+        }
+
+
+
+
+
 
 
 
