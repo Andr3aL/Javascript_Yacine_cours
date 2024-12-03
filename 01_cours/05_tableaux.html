@@ -226,11 +226,32 @@
             let joursTravailColombbus = joursTravail10MW;
             console.log(joursTravailColombbus);
             
+            let contactCouleur = couleurs.join(' - ');
+            // permet de séprarer les éléments sous forme de chaine de caractère concaténée. Pour choisir le séparateur entre les éléments, on utilise la méthode join(), qui retroune une chaine de caractères, créée en concaténant les différentes valeurs d'un tableau.
+            // C'est impératif de stocker la chaine de caractères dans une autre variable.
+            console.log(contactCouleur);
             
+            document.write(` <br> ${contactCouleur}`);
+
+            let langages = ["HTML", "CSS", "JS"];
+            let verif = langages.includes("CSS"); // Attention la méthode vérifie l'écriture : elle est "sensible à la casse". Ici, si on cherche "css", la méthode indiquera "false".
 
 
 
+            console.log(verif); // true
+            console.log(typeof verif, verif); // boolean true
+            console.log(typeof langages); // object
 
+            // Tableau en javascript : type : object (car il contient plusieurs valeurs)
+            // En sql, on appele ça des "tuples" (= "enregistrements")
+
+            // Pour déterminer si un tableau contient une valeur précise, alors j'utilise la méthode includes(), et je passe la valeur recherchée en argument dans la méthode.
+            
+            // Pour fusionner différents tableaux entre eux afin d'en créer un nouveau, on utilise la méthode concat().
+            let totalTableau = langages.concat(couleurs, monTableau, array4dimensions); // Ici, couleurs etc sont des variables (=tableaux) qui contiennent des valeurs (donc on ne met pas de guillemets)
+            console.log(totalTableau);
+            
+            
 
     </script>
 
