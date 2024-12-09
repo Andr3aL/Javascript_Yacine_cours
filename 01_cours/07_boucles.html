@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les boucles en JS</title>
+</head>
+<body>
+
+    <script>
+
+        document.write(`<h1> Les boucles </h1>`);
+
+        
+        // Les boucles est une structure conditionnelle  qui permet de répéter un certain nombre de fois le code,  jusqu'à ce qu'un test ne soit plus vrai
+
+        /*
+            Il existe 2 principaux types de boucles : 
+            * La boucle "for" permet de repéter du code lorsque l'on sait d'avance combien de fois il faudra le répéter.
+            * La boucle "while" permet de répéter du code autant de fois qu'il faut pour qu'une condition ne soit plus vraie.
+        */
+
+        document.write(`<h2> La boucle "for" </h2>`);
+
+        /*
+            syntaxe
+
+            for (3 arguments : initialisation; condition de continuation; incrémentation) {
+            
+                code à exécuter;
+            
+            }
+        */
+        // let i = 0; /* Pour voir la valeur de i à chaque itération */
+
+
+
+
+        for(let i = 0; i <= 10; i++) {
+            document.write(`<p> Insctruction exécutée ${i} </p>`);
+
+
+
+
+            console.log(i); /* Pour voir la valeur de i à chaque itération */
+        }
+        
+
+    
+        /*
+
+            i = 0 -> j'initialise le départ de la boucle à 0
+            i <= 0 -> tant que la valeur de i est inférieure ou égale à 10
+            i++ -> j'incrémente un tour de boucle
+
+            En gros, je donne l'instruction de faire un tour de boucle supplémentaire tant que la valeur de i est inférieure ou égale à 10
+
+        */
+
+        document.write("<hr>");
+
+        for(let i = 0; i <= 10; i += 2) { /* i += 2 équivalent à i = i+2 équivalent à "on incrémente de 2 en 2" */
+            document.write(`<p> Je compte deux par deux ${i} </p>`);
+        } 
+
+
+        // Je boucle sur un tableau
+        let users = ["Hawa", "Andrea", "Alpha", "Islem", "Roger"];
+
+        // console.log(users[0]);
+        
+        // console.log(users[2]);
+
+        // console.log(users.length); /* .length est une propriété */
+
+        
+        for(let i = 0; i < users.length; i++) { /* i <= users.length -1 OU i < users.length (2 écritures possibles) */
+
+            document.write(`<p> ${users[i]} </p>`);
+            document.write(`<p>` + users[i] + `</p>`); // pareil
+
+        }
+        
+
+        document.write(`<h2> La boucle "while" </h2>`);
+
+        /* 
+        
+            syntaxe
+        
+            while(expression qui vaut true ou false) {
+            
+                tant que l'expression vaut true, code a exécuter
+            
+            }
+        
+        */
+
+
+        document.write(`<hr>`);
+
+        let i = 0; // J'initialise une variable à 0
+
+        while(i <= 5) { // tant que i est inférieur ou égal à 5
+
+
+            document.write(i + '/');
+
+            // attention à ne pas oublier l'incrémentation
+            i++; // à chaque tour de la boucle, j'incrémente la variable i
+
+        }
+
+        // on utilise while quand on ne fait pas combien de fois on va itérer (on connait pas la taille)
+        // on utilise for quand on connait le nombre de fois où on va itérer (on connait la taille du tableau, on connait le nombre de fois que l'on va itérer)
+        // POUR LES TABLEAUX : utiliser préférentiellement la boucle for, en général
+
+    </script>
+    
+
+
+</body>
+</html>
