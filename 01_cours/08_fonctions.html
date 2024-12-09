@@ -11,18 +11,136 @@
 
     <script>
 
-        document.write(`<h2> Les fonctions </h2>`);
+        document.write(`<h2> Fonctions prédéfinies et utilisateurs </h2>`);
         document.write(`<hr>`);
 
+        // Le js possède des fonctions. Ce sont des morceaux de codes encapsulés qu'on appele au besoin pour exécuter une action précise. On distingue les fonctions prédéfinies et les fonctions utilisateurs.
+
+        document.write(`<h3> Fonctions prédéfinies </h3>`);
+
+        // ------- a) Fonctions prédéfinies sur des nombres -------
+
+        let testNumber = 1.55555555555;
+        document.write(typeof testNumber + ' '); /* + ' ' , c'est pour créer un espace */
+
+        let number = testNumber.toFixed(2);
+        document.write(typeof number + ' ');
+        document.write(number + ' ');
+
+        // La fonction toFixed() définit un nombre de chiffres après la virgule, et elle retourne une chaine de caractère de type string
+
+        document.write(typeof parseFloat(number) + ' ');
+
+        // La fonction parseFloat() permet de convertir un string ou toute autre chose, en type "number"
+
+        document.write(`<br>`);
+
+        // let testMath = Math.pow(2,2); // puissance
+        // let testMath = Math.PI; // 3.14
+        // let testMath = Math.floor(1.9); // Il va chercher le nombre entier inférieur, donc ici 1
+        // let testMath = Math.ceil(1.9); // Il va chercher le nombre entier supérieur, donc ici 2
+        // let testMath = Math.max(10,8,14,50,6); // Il va retourner la valeur la plus haute
+        // let testMath = Math.min(10,8,14,50,6); // Il va retourner la valeur la plus petite
+        // let testMath = Math.random(); // Il va retourner un nombre décimal entre 0 et 1 qui change à chaque rafraichissement (actualisation de page). C'est un nombre complètement aléatoire.
+
+        // console.log(testMath);
+
+        // Je veux un nombre entier entre 0 et 100 de façon aléatoire
+        // let nombre = Math.random() * 100;
+        // document.write(nombre + '<br> ');
+        // document.write(Math.round(nombre) + '<br> ');
         
 
 
 
+        // ------- b) Fonctions prédéfinies sur des chaines de caractères -------
+
+
+        document.write(`<hr>`);
+        document.write(`<br>`);
+
+        let phrase = "Salut Yacine";
+
+        document.write(phrase.length); // retourne le nombre de caractère (attention, il compte les espaces aussi !) (length = propriété = ne prend pas de paramètres)
+
+
+        document.write(`<br>`);
+
+
+        document.write(phrase.indexOf("l") + `<br>`); // retourne la position (l'index) de l'argument passé en paramètre de la fonction indexOf()
+
+        document.write(phrase.toLowerCase() + '<br>'); // retourne "salut yacine" tout en minuscule. C'est une fonction pour enlever les majuscules.
+
+        document.write(phrase.toUpperCase() + '<br>'); // retourne "SALUT YACINE" tout en majuscule. C'est une fonction pour tout mettre en majuscule.
+
+        let phrase2 = '         du texte          ';
+        let sansEspace = phrase2.trim(); // cette fonction supprime les epsaces en trop tout autour de la chaine de caractère (avant et après, mais pas entre)
+        console.log(sansEspace.length); 
+        console.log(sansEspace);
+        document.write(sansEspace);
+        document.write(`<br>`);
+        document.write(sansEspace.length);
+        document.write(`<br>`);
+
+        let phrasee = '         du texte          ';
+        document.write(phrasee);
+        document.write(`<br>`);
+        document.write(phrasee.length);
+
+        let phrase3 = 'metro, boulot, dodo/ 0';
+        console.log(phrase3.split('/')); // permet de retourner un tableau à partir d'une chaine de caractère et de le séparer où l'on veut (il y a plusieurs façons de séparer : on choisit le type de séparateur et on le place en argument de la fonction split pour séparer les cases de notre tableau)
+        
+        document.write(`<hr>`);
+        document.write(`<br>`);
 
 
 
 
+        document.write(`<h2> Fonctions prédéfinies et utilisateurs </h2>`);
+        document.write(`<hr>`);
 
+
+        // Un des grands principes de programmation est d'avoir un code DRY (don't repeat yourselft)
+        // Les fonctions sont des blocs de codes réutilisavles et modifiables à volonté
+
+        // --------- Déclaration d'une fonction ou initialisation d'une fonction
+
+        function maFonction() { // function est un "mot-clé" de javascript, comme "let" par exemple
+            document.write(`<p> Ma première fonction </p>`);
+        }
+
+
+        // Appel ( = exécution) de la fonction
+
+        maFonction();
+
+        // Autre syntaxe pour déclarer une fonction, elle consiste à assigner une fonction à une variable
+
+        let direBonjour = function() {
+            document.write(`<p> Bonjour tout le monde </p>`);
+        }
+
+        direBonjour();
+
+        // Fonction avec paramètre
+
+        function direBonjour1(prenom) { // prenom ici, est un paramètre, c'est une variable 'locale' à cette fonction, uniquement utilisable dans cette fonction.
+            document.write(`<p> Bonjour ${prenom} </p>`);
+        }
+
+        direBonjour1('Alexandre');
+        direBonjour1('Delma');
+
+        // Vous pouvez mettre autant de paramètre que nécessaire.
+
+        function direBonjour2(nom, age) {
+            document.write(`<p> Bonjour ${nom}, tu as ${age} ans </p>`);
+        }
+
+        direBonjour2('Yacine', '28');
+        direBonjour2('Alexandre', '51');
+
+        
 
     </script>
     
