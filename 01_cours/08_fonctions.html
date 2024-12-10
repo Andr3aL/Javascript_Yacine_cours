@@ -140,7 +140,160 @@
         direBonjour2('Yacine', '28');
         direBonjour2('Alexandre', '51');
 
+        // Fonction de calcul
+        function addition(nombre1, nombre2) {
+            let resultat = nombre1 + nombre2;
+            document.write(`Résultat de l'addition de : ${nombre1} + ${nombre2} = ${resultat}`);
+        }
+
+        addition(5,10);
+
+
+        // Protection des fonctions
+        function direSalut(prenomSalut = "") {
+            document.write(`<p> Salut ${prenomSalut} </p>`)
+        }
+
+
+        direSalut();        
+        // création d'une fonction comme raccourci de "document.write()"
+
+        function d(content, balise) {
+            if (balise === 1) {
+                document.write(`<h2>${content}</h2>`);
+            } else {
+                document.write(`<p>${content}</p>`);
+            }
+        }
+
+        d("titre", 1);
+        d(phrase);
+
+        // Fonctions avec le mot clé "return" // retourne une valeur
+
+        function calculAge(anneActuelle, anneNaissance) {
+            // Pour extraire le résultat et le stocker dans une variable, nous utilisons le RETURN
+            return anneActuelle - anneNaissance;
+            // Tout ce qui se trouve après le RETURN ne s'exécute pas
+            // un RETURN arrête complètement l'exécution d'une fonction
+        }
+
+        let age = calculAge(2024, 2002);
+        d(age);
+
+        // Il existe une autre façon pour écrire ou déclarer une fonction
+
+        let maFonction2 = (x, y) => {
+
+            d(x + y);
+
+        }
+
+        maFonction2(5, 2);
+// -----------------------
+    // la fonction fléchée ne peut pas être exécutée avant initialisation
+    // la fonction fléchée : les accolades ne sont pas nécessaires si il n'y a qu'une seule insctruction.
+    // "=>" : c'est le "return"
+
+        let maFonction3 = (f, r) => f * r;
+
+        let produit = maFonction3(6, 5);
+
+        d(produit);
+
+        document.write(`<hr>`);
+        document.write(`<br>`);
+
+        d('La portée des variables', 1);
+
+        /* 
         
+        En javascript, la portée des variables définit à quels endroits dans le code une variable est accessible. Il existe principalement trois types de portée : 
+
+        Portée globale (global scope)
+        Portée locale (ou fonctionnelle) (function scope)
+        portée de bloc (block scope)
+
+        1. portée globale (Global Scope)
+        Une variable déclarée en dehors de toute fonction ou bloc a une portée globale.
+        Cela signifie qu'elle est accessible depuis d'importe quelle partie du code.
+
+        Exemple :
+
+        */
+
+        let message = "Bonjour, monde!"; // Variable globale
+
+        function afficherMessage() {
+            d(message); // Accès à la variable globale
+        }
+
+        afficherMessage(); // Affiche : Bonjour, monde! -> Accès également à la variable globale
+
+        // dans cet exemple, la variable message est définie en dehors de la fonction. Elle est donc accessible depuis la fonction "afficherMessage" et même depuis le reste du programme.
+
+        /*
+        
+        2. Portée locale (ou fonctionnelle) (function scope) : 
+        Une variable déclarée à l'intérieur d'une fonction est accessible uniquement à l'intérieur de cette fonction. Elle a une portée locale (ou portée de fonction).
+        
+        */
+
+        function saluer() {
+            var prenom = "Delma"
+            let nom = "Leta"; // Variable locale à la fonction
+            d(`Salut ${nom}`);
+        }
+
+        saluer(); // Affiche : Salut Delma
+        // console.log(nom); // Erreur : "nom" est non définie ("nom" is not defined)
+        // console.log(prenom);
+        
+
+        // Ici, la variable "nom" est déclarée dans la fonction "saluer()". Elle n'est accessible qu'à l'intérieur de cette fonction. Toute tentative d'y accéder en dehors de la fonction provoque une erreur.
+        
+        // Exemple :
+
+        /*
+        
+        3. Portée de bloc (Block Scope)
+        Les déclarations de variables avec "let" et "const" respectent la portée de bloc, ce qui signifie qu'elles sont accessibles uniquement à l'intérieur du bloc {} dans lequel elles sont définies (par exemple, dans une boucle ou une condition if). En revanche, les variables déclarées avec "var" ne respectent pas la portée de bloc.
+
+        Exemple avec "let" et "var" : 
+        
+        */
+
+        if (true) {
+            let X = 10;
+            const Y = 20;
+            console.log(X); // Affiche : 10
+            console.log(Y); // Affiche : 20
+        }
+
+        // console.log(X); // Erreur : X is not defined
+        // console.log(Y); // Erreur : Y is not defined
+
+        // Dans cet exemple, X et Y sont déclarées avec "let" et "const" dans le bloc "if". Ils ne sont accessibles que dans ce bloc.
+
+        // Exemple avec "var" : 
+
+        if (true) {
+            var z = 30;
+            console.log(z); // Affiche : 30
+            
+        }
+            console.log(z); // Affiche : 30 -> car "var" ignore la portée de bloc
+            // Avec "var", la variable z est accessible en dehors du bloc "if", car "var" n'est pas limité par la portée de bloc, mais uniquement par la portée de fonction.
+
+            
+        
+
+
+
+
+
+
+
 
     </script>
     
