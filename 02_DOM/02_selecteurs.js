@@ -28,10 +28,16 @@ console.log(select2.textContent); // .textContent est une propriété
 let selectClass = document.getElementsByClassName("selectClass");
 console.log(selectClass);
 
+
+// Lorsqu'on selectionne plusieurs éléments en même temps avec "getElementsByClassName", on crée un array en JS qui affichera dans la console avec l'intitulé "HTMLCollection".
+// Et comme un tableau, le premier élément aura l'index 0, et grâce à cet index, je pourrai viser un seul de ces éléments.
+
+// On va aller plus loin, en ciblant ce qui se trouve dans l'élément (le contenu de l'élément).
+
 console.log(selectClass[0].innerHTML);
 console.log(selectClass[1].textContent); // .innerHTML et .textContent donnent la même chose
 
-
+// .innerHTML permet de définir le contenu de la balise ou l'élément HTML et le sélectionner dans le but de l'identifier, de le modifier ou de le manipuler autrement.
 
 
 
