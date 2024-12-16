@@ -170,4 +170,52 @@ parent.insertBefore(toMove, sousTitre); // paramètres : (élément à déplacer
 
 
 // Supprimer un élément 
+// Pour supprimer un élément, il nous faut 2 paramètres : 
+
+// -> le parent
+// -> l'élément à supprimer
+
+// le parent
+let liste = document.querySelector("ul");
+console.log(liste);
+
+// l'élément à supprimer
+let li = document.getElementsByTagName("li")[1];
+console.log(li);
+// let li = document.getElementsByTagName("li");
+// console.log(li[1]);
+
+// pour supprimer, on utilise la fonction .removeChild()
+// liste.removeChild(li);
+
+// Créer un attribut et sa valeur : 
+// La méthode setAttribute() -> pour ajouter un nouvel attribut ou changer la valeur existante d'un attribut pour un élément
+
+let lien1 = document.querySelector("a"); // va récupérer le 1er des "a"
+lien1.setAttribute("href", "01_introduction.html"); // changer la valeur de l'attribut
+console.log(lien1);
+
+// rajoute un attribut et sa valeur
+lien1.setAttribute("class", "link-underline-danger text-warning");
+console.log(lien1);
+
+
+
+// -----------------------------------
+
+
+
+let lesA = document.querySelectorAll("a");
+// console.log(lesA);
+
+// Ici, pour récupérer l'attribut du 3ème "a" dans la liste ul, il faut indiquer l'index 1 car le li[1] est supprimé du DOM
+
+let valeurA2 = lesA[2].getAttribute("href");
+console.log(valeurA2);
+
+
+
+
+
+
 
