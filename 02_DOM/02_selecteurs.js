@@ -146,5 +146,28 @@ section.prepend(nouveauParaDebut); // .prepend() va insérer l'élément et son 
 
 
 
+// Déplacer un élément 
+// Pour déplacer un élément, il nous faut 3 paramètres. 
 
+/*
+-> le parent
+-> l'élément à déplacer
+-> l'élément qui vient après
+*/
+
+// Le parent
+let parent = document.querySelector("main");
+// L'élément qui vient après
+let sousTitre = document.querySelector("h2");
+// L'élément à déplacer
+let toMove = document.querySelector("h4");
+
+parent.insertBefore(toMove, sousTitre); // paramètres : (élément à déplacer, élément qui vient après)
+
+
+
+
+
+
+// Supprimer un élément 
 
