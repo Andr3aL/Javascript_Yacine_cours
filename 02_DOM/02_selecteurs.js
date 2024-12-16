@@ -217,5 +217,35 @@ console.log(valeurA2);
 
 
 
+// Exercice
+
+// grâce à votre script, créer une balise "a" dans la balise "h1" avec le lien vers la documentation JS, qui s'affiche sur un nouvel onglet.
+// Ce lien sera de couleur verte et non souligné.
+
+// On déclare et remplit une variable "lien" qui va stocker notre création de balise "a" dans le DOM
+let lien = document.createElement("a");
+
+// Ensuite grâce à innerText, on lui écrit la valeur "Cours Javascript"
+lien.innerText = "Cours Javascript";
+
+// On vient viser notre "h1" dans le DOM grâce à une variable 
+let h1 = document.querySelector("h1");
+// let h1 = document.getElementById("titreNiveau1"); // Autre méthode
+
+// On utilise .prepend() qui va insérer l'élément et son contenu au début du h1
+h1.prepend(lien);
+// h1.appendChild(lien); // Autre méthode
+
+// On applique le style voulu
+lien.style.color = "green";
+lien.style.textDecoration = "none";
+
+// On lui applique les attributs désirés
+lien.setAttribute("target", "_blank");
+// lien.target = "_blank"; // Autre méthode
+lien.setAttribute("href", "https://developer.mozilla.org/en-US/docs/Web/JavaScript");
+// lien.href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript"; // Autre méthode
+
+
 
 
