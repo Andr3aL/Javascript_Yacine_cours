@@ -159,5 +159,49 @@ lesP[2].addEventListener('click', ()=>{
 
 
 
+// Tableau qui regroupe factorise/condense tout le code précédent : 
+
+// const ROUGE = document.getElementById("rouge");
+// const ORANGE = document.getElementById("orange");
+// const BLEU = document.querySelector("#bleu");
+// const PRIMARY = document.querySelector("#primary");
+// const SUCCESS = document.querySelector("#success");
+
+// let colors = ["ROUGE", "ORANGE", "BLEU", "PRIMARY", "SUCCESS"];
+// let colours = [ROUGE, ORANGE, BLEU, PRIMARY, SUCCESS];
+
+// function colorsEvent(myColour, myColor) {
+//   myColour.classList.toggle("cercle");
+//   if (myColour.textContent === "GOLD") {
+//     myColour.textContent = myColor;
+//   } else {
+//     myColour.textContent = "GOLD";
+//   }
+// }
+
+// for (let i = 0; i < colours.length; i++) {
+//   colours[i].addEventListener("click", () =>
+//     colorsEvent(colours[i], colors[i])
+//   );
+// }
+
+
+// L'objet event (e) ou (ev) est un objet javascript, contient des informations sur l'action qui vient de se produire, avec de nombreuses propriétés et méthodes.
+// Définir le event en tant que paramétre de votre fonction est facultatif mais , parfois, il est utile que la fonction de gestionnaire connaisse l'évenement qui s'est produit
+
+
+// Si on met un id "interdit" sur le "cliquez moi", on peut faire ça : 
+// On empèche le chargement de la page
+// Il est possible d'annuler ce comportement par défaut en appelant la méthode "preventDefault()" sur l'objet "event"
+document.querySelector("#interdit").addEventListener("click", (event)=>{
+    event.preventDefault(); // La méthode "preventDefault()" est particulièrement utile pour éviter que la soumission d'un formulaire recharge la page.
+    console.log('Continuez plutôt à lire le cours !!!');
+    
+});
+
+
+
+
+
 
 
