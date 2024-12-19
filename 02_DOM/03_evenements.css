@@ -1,0 +1,36 @@
+#rouge, #orange, #info, #primary, #success {
+    width: 150px;
+    height: 150px;
+    font-size: 2em;
+    line-height: 150px;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+/* div rouge */
+#rouge {
+    background-color: red;
+}
+
+/* div orange */
+#orange {
+    background-color: orange;
+}
+
+#info {
+    background-color: aqua;
+}
+
+#primary {
+    background-color: rgb(0, 125, 125);
+}
+
+.vert {
+    background-color: palegreen;
+}
+
+.gold {
+    background-color: gold;
+    border-radius: 50%;
+}
