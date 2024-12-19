@@ -123,11 +123,39 @@ divChangeCouleur.addEventListener("click", function(){ // Je vérifie si la div 
 
 });
 
+// image chat : 
+
+let imageChat = document.querySelector('img');
+imageChat.style.width = "300px";
+
+let lesP = document.querySelectorAll(".toggle p");
+console.log(lesP);
+
+// lesP[0].style.textDecoration = 'underline';
+// lesP[1].style.textDecoration = 'underline';
+// lesP[2].style.textDecoration = 'underline';
 
 
 
+for (let paragraphe of lesP) {
+    paragraphe.style.textDecoration = 'underline';
+    paragraphe.style.color = '#ee3366';
+    paragraphe.style.fontWeight = 'bolder';
+}
 
+// ---------------------------
 
+lesP[0].addEventListener('click', ()=>{
+    imageChat.classList.add('hide');
+});
+
+lesP[1].addEventListener('click', ()=>{
+    imageChat.classList.remove('hide');
+});
+
+lesP[2].addEventListener('click', ()=>{
+    imageChat.classList.toggle('hide');
+});
 
 
 
