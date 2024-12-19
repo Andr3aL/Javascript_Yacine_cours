@@ -86,7 +86,7 @@ let divInfo = document.querySelector("#info");
 divInfo.addEventListener("mouseover", function(){
     divInfo.style.backgroundColor = "gold";
     divInfo.style.borderRadius = "50%";
-    divInfo.textContent = "GOLD";    
+    divInfo.textContent = "GOLD";
 });
 
 // 5- div #primary :
