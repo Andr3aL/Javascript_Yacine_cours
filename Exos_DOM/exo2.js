@@ -76,7 +76,6 @@ function removeColorChangeGreen () {
 }
 
 button.addEventListener("click", afficherCacher);
-
 rectangle.addEventListener("mouseover", addColorChange);
 rectangle.addEventListener("mouseout", removeColorChange);
 rectangle.addEventListener("dblclick", addColorChangeGreen);
