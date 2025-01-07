@@ -211,12 +211,15 @@ document.querySelector("#interdit").addEventListener("click", (event)=>{
 
 let prenom = document.querySelector("#prenom");
 
-console.log(prenom);
+// console.log(prenom);
 // En JS, pour accéder à la valeur d'une zone de texte dans un formulaire, on utilise la propriété value
 
 let submit = document.querySelector("#submit");
 
 // on va récupérer la valeur saisie dans l'input avec prenom.value quand on clique sur le bouton submit grâce à un écouteur d'évènmenent et grâce a préventdefault()
+
+
+// Méthode avec 'click'
 
 submit.addEventListener('click', (event)=> {
     
@@ -224,5 +227,113 @@ submit.addEventListener('click', (event)=> {
     // je récupère la valeur de l'élément input prenom
     let prenomValue = prenom.value;
     console.log(prenomValue);
+    // console.log(event.target);
     
-})
+    
+});
+
+
+
+// Autre façon de faire (avec submit, et pas 'click' cette fois)
+
+// On récupère tout le form
+
+let form = document.querySelector('form');
+form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    console.log(e.target);
+});
+
+// On récupère html
+
+form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    console.log(e.target[1].value); // va afficher html
+});
+
+// On récupère css
+
+form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    console.log(e.target[2].value); // va afficher css
+});
+
+
+// Focus et blur pour les formulaires
+
+
+// Focus
+
+prenom.addEventListener('focus', ()=>{
+// L'utilisateur clique à l'intérieur du champ (input prenom)
+console.log(prenom.style.width); // avant
+prenom.style.width = '100px';
+console.log(prenom.style.width); // après
+
+});
+
+
+// Blur
+
+prenom.addEventListener('blur', ()=>{
+// L'utilisateur clique à l'extérieur du champ (input prenom) ou utilise tab, ou sors du champ
+console.log(prenom.style.width); // avant
+prenom.style.width = '500px';
+console.log(prenom.style.width); // après
+
+});
+
+
+// Evènement "change"
+// L'évènement change est déclanché lorsqu'un changement de valeur d'un élément html est réalisé par l'utilisateur
+
+// "change" : pour le changement d'état d'un élément
+
+const HTML = document.querySelector('#html');
+const LABELHTML = document.querySelector("#labelHTML");
+
+HTML.addEventListener('change', (event)=> {
+
+    // HTML.style.color = 'red';
+    // console.log(HTML.style.color);
+
+    // console.log(HTML.checked);
+
+    // if (HTML.checked) {
+    //     // Avec un variable :
+    //     // LABELHTML.style.color = 'red';
+    //     // HTML.style.color = 'red';
+    //     // ou sans variable :
+    //     // document.querySelector("#labelHTML").style.color = 'red';
+    //     // ou avec l'id directement :
+    //     // labelHTML.style.color = 'red';
+
+    //     event.target.style.backgroundColor = 'red';
+    //     console.log(event.target);
+  
+    // } else {
+    //     LABELHTML.style.color = 'blue';
+    // }
+
+    if (event.target.checked) {
+        // Avec un variable :
+        // LABELHTML.style.color = 'red';
+        // HTML.style.color = 'red';
+        // ou sans variable :
+        // document.querySelector("#labelHTML").style.color = 'red';
+        // ou avec l'id directement :
+        // labelHTML.style.color = 'red';
+
+        event.target.nextElementSibling.style.color = 'red';
+        // ici ob change la couleur de l'élément label à partir de l'élément input
+        event.target.style.backgroundColor = 'red';
+        // ici on change le background_color de l'élément input
+        // console.log(event.target);
+  
+    } else {
+        LABELHTML.style.color = 'blue';
+    }
+});
+
+
+
