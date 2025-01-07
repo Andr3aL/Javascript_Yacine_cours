@@ -289,6 +289,22 @@ console.log(prenom.style.width); // après
 
 // "change" : pour le changement d'état d'un élément
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const HTML = document.querySelector('#html');
 const LABELHTML = document.querySelector("#labelHTML");
 
@@ -334,6 +350,113 @@ HTML.addEventListener('change', (event)=> {
         LABELHTML.style.color = 'blue';
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Même chose pour CSS et JS : 
+///////////////// Méthode 1 : 
+
+// const CSS_ = document.querySelector('#css');
+// const LABELCSS = document.querySelector("#labelCSS");
+
+// CSS_.addEventListener('change', (event)=> {
+
+//     if (event.target.checked) {
+
+//         event.target.nextElementSibling.style.color = 'red';
+//         event.target.style.backgroundColor = 'red';
+
+//     } else {
+//         LABELCSS.style.color = 'blue';
+//     }
+
+// });
+
+
+// const JS = document.querySelector('#js');
+// const LABELJS = document.querySelector("#labelJS");
+
+// JS.addEventListener('change', (event)=> {
+
+//     if (event.target.checked) {
+
+//         event.target.nextElementSibling.style.color = 'red';
+//         event.target.style.backgroundColor = 'red';
+  
+//     } else {
+//         LABELJS.style.color = 'blue';
+//     }
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////// Méthode 2 : avec une boucle : 
+
+// name est un attribut commun aux 3
+// on va les mettre dans un tableau
+// sur ce tab on va faire une boucle 
+// si 
+
+
+
+
+let checks = document.getElementsByName('langage');
+
+console.log(checks);
+
+
+
+for (let button of checks) {
+
+    button.addEventListener('change', (event)=> {
+// Je vérifie la valeur du checked de l'élément dans mon objet event => true si la case est cochée
+
+        console.log(event.target.labels[0]);
+        
+            if (event.target.checked) {
+                event.target.labels[0].style.color = 'red';
+                // event.target.nextElementSibling.style.color = 'red';
+                event.target.style.backgroundColor = 'red';
+        
+            } else {
+                event.target.labels[0].style.color = 'blue';
+                event.target.style.backgroundColor = 'white';
+            }
+
+    });
+
+};
+
+
 
 
 
