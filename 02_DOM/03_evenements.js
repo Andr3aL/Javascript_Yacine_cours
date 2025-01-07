@@ -465,6 +465,19 @@ for (let button of checks) {
 
 // Boutons radio : 
 
+
+
+
+
+
+// Version avec fonction de reset des couleurs
+
+
+
+
+
+
+
 let radio = document.getElementsByName('niveau');
 
 console.log(radio);
@@ -499,13 +512,26 @@ for (let button of radio) {
             //     event.target.style.backgroundColor = 'red';
             // }
 
+
+
+
+
+
+            // boucle de réinitialisation de couleur (pour remettre la couleur initiale)
             for (let btn of radio) {
                 btn.labels[0].style.color = "";
             }
 
+
+
+
+
+
+
+
             // correction : 
 
-                if (button.checked) {
+                // if (button.checked) {
                     switch (event.target.value) {
                         case "acquis" : 
                             event.target.labels[0].style.color = "green"
@@ -518,13 +544,52 @@ for (let button of radio) {
                             break;
                     }   
                     // event.target.labels[0].style.backgroundColor = "#f0f0f0";
-                }
+                // }
 
         });
 
 };
 
 
+
+
+
+
+// Version boucles
+
+
+
+
+
+// let radios = document.getElementsByName('niveau');
+
+// for (let button of radios) {
+//     button.addEventListener('change', (event) => {
+//         // Réinitialiser les styles pour tous les boutons
+//         radios.forEach(radio => {
+//             let label = radio.labels[0];
+//             label.style.color = 'black';
+//             label.style.backgroundColor = 'white';
+//         });
+
+//         // Appliquer les styles au bouton sélectionné
+//         if (button.checked) {
+//             let label = event.target.labels[0];
+//             switch (event.target.value) {
+//                 case "acquis":
+//                     label.style.color = "green";
+//                     break;
+//                 case "enCours":
+//                     label.style.color = "orange";
+//                     break;
+//                 case "nonAcquis":
+//                     label.style.color = "red";
+//                     break;
+//             }
+//             label.style.backgroundColor = "#f0f0f0";
+//         }
+//     });
+// }
 
 
 
