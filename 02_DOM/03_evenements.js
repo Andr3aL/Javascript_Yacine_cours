@@ -37,7 +37,9 @@
 // 1- div #rouge
 
 let divRouge = document.querySelector("#rouge"); // je sélectionne ma div par son id
-console.log(divRouge);
+
+// console.log(divRouge);
+
 // Avec une fonction anonyme : 
 // divRouge.addEventListener("click", function(){
 //     divRouge.style.backgroundColor = "gold";
@@ -129,7 +131,7 @@ let imageChat = document.querySelector('img');
 imageChat.style.width = "300px";
 
 let lesP = document.querySelectorAll(".toggle p");
-console.log(lesP);
+// console.log(lesP);
 
 // lesP[0].style.textDecoration = 'underline';
 // lesP[1].style.textDecoration = 'underline';
@@ -194,14 +196,33 @@ lesP[2].addEventListener('click', ()=>{
 // On empèche le chargement de la page
 // Il est possible d'annuler ce comportement par défaut en appelant la méthode "preventDefault()" sur l'objet "event"
 document.querySelector("#interdit").addEventListener("click", (event)=>{
-    event.preventDefault(); // La méthode "preventDefault()" est particulièrement utile pour éviter que la soumission d'un formulaire recharge la page.
+    event.preventDefault(); // La méthode "preventDefault()" est particulièrement utile pour éviter que la soumission d'un formulaire recharge la page. Cela empêche le comportement par defaut, par exemple dans un formulaire : on n'evoie pas les données grâce à ça. Ce qui nous permet de récyupérer les données AVANT (PREVENTDEFAULT) de les envoyer.
+
     console.log('Continuez plutôt à lire le cours !!!');
     
+    // console.log(event);
+    
+
 });
 
 
+// ---------------- Gestion du formulaire -------------
 
 
+let prenom = document.querySelector("#prenom");
 
+console.log(prenom);
+// En JS, pour accéder à la valeur d'une zone de texte dans un formulaire, on utilise la propriété value
 
+let submit = document.querySelector("#submit");
 
+// on va récupérer la valeur saisie dans l'input avec prenom.value quand on clique sur le bouton submit grâce à un écouteur d'évènmenent et grâce a préventdefault()
+
+submit.addEventListener('click', (event)=> {
+    
+    event.preventDefault();
+    // je récupère la valeur de l'élément input prenom
+    let prenomValue = prenom.value;
+    console.log(prenomValue);
+    
+})
