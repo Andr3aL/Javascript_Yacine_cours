@@ -460,3 +460,71 @@ for (let button of checks) {
 
 
 
+
+
+
+// Boutons radio : 
+
+let radio = document.getElementsByName('niveau');
+
+console.log(radio);
+
+
+for (let button of radio) {
+
+    button.addEventListener('change', (event)=> {
+// Je vérifie la valeur du checked de l'élément dans mon objet event => true si la case est cochée
+
+        console.log(event.target.value);
+
+
+            // if (button.checked.value = 'acquis') {
+
+            //     event.target.labels[0].style.color = 'green';
+            //     event.target.style.backgroundColor = 'green';
+        
+            // // } else {
+            // //     event.target.labels[0].style.color = 'blue';
+            // //     event.target.style.backgroundColor = 'white';
+            // // }
+            // }
+
+            // if (button.checked) {
+            //     event.target.labels[0].style.color = 'yellow';
+            //     event.target.style.backgroundColor = 'yellow';
+            // }
+
+            // if (button.checked) {
+            //     event.target.labels[0].style.color = 'red';
+            //     event.target.style.backgroundColor = 'red';
+            // }
+
+            for (let btn of radio) {
+                btn.labels[0].style.color = "";
+            }
+
+            // correction : 
+
+                if (button.checked) {
+                    switch (event.target.value) {
+                        case "acquis" : 
+                            event.target.labels[0].style.color = "green"
+                            break;
+                        case "enCours" : 
+                            event.target.labels[0].style.color = "orange"
+                            break;
+                        case "nonAcquis" : 
+                            event.target.labels[0].style.color = "red"
+                            break;
+                    }   
+                    // event.target.labels[0].style.backgroundColor = "#f0f0f0";
+                }
+
+        });
+
+};
+
+
+
+
+
